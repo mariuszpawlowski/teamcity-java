@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<build id="25" buildTypeId="Psychoffice_BuildDeploy" state="queued" href="/httpAuth/app/rest/buildQueue/id:25" webUrl="http://37.233.102.85:8080/viewQueued.html?itemId=25">
+    <buildType id="Psychoffice_BuildDeploy" name="[DEV] Build &amp; Deploy" projectName="Psychoffice" projectId="Psychoffice" href="/httpAuth/app/rest/buildTypes/id:Psychoffice_BuildDeploy" webUrl="http://37.233.102.85:8080/viewType.html?buildTypeId=Psychoffice_BuildDeploy"/>
+    <startEstimate>20151122T233433+0100</startEstimate>
+    <queuedDate>20151122T232852+0100</queuedDate>
+    <triggered type="user" date="20151122T232852+0100">
+        <user username="admin" name="Mariusz Pawłowski" id="1" href="/httpAuth/app/rest/users/id:1"/>
+    </triggered>
+    <changes href="/httpAuth/app/rest/changes?locator=build:(id:25)"/>
+    <revisions count="0"/>
+    <compatibleAgents href="/httpAuth/app/rest/buildQueue/id:25/compatibleAgents"/>
+    <artifacts href="/httpAuth/app/rest/builds/id:25/artifacts/children/"/>
+</build>
+
+
+build response > buildqueue
+
+-----
+
+        http://pojo.sodhanalibrary.com
+
+        http://teamcity.mario.p6.tiktalik.io:8080/httpAuth/app/rest/buildQueue/id:25
+
+<build id="25" buildTypeId="Psychoffice_BuildDeploy" number="14" status="SUCCESS" state="finished" href="/httpAuth/app/rest/builds/id:25" webUrl="http://37.233.102.85:8080/viewLog.html?buildId=25&buildTypeId=Psychoffice_BuildDeploy">
+<statusText>Tests passed: 1</statusText>
+<buildType id="Psychoffice_BuildDeploy" name="[DEV] Build & Deploy" projectName="Psychoffice" projectId="Psychoffice" href="/httpAuth/app/rest/buildTypes/id:Psychoffice_BuildDeploy" webUrl="http://37.233.102.85:8080/viewType.html?buildTypeId=Psychoffice_BuildDeploy"/>
+<queuedDate>20151122T232852+0100</queuedDate>
+<startDate>20151122T232853+0100</startDate>
+<finishDate>20151122T233013+0100</finishDate>
+<triggered type="user" date="20151122T232852+0100">
+    <user username="admin" name="Mariusz Pawłowski" id="1" href="/httpAuth/app/rest/users/id:1"/>
+</triggered>
+<lastChanges count="1">
+    <change id="6" version="6bd5a15bab249abdadac6ad7f55592cf94200ad1" username="mario" date="20151122T232057+0100" href="/httpAuth/app/rest/changes/id:6" webUrl="http://37.233.102.85:8080/viewModification.html?modId=6&personal=false"/>
+</lastChanges>
+<changes href="/httpAuth/app/rest/changes?locator=build:(id:25)"/>
+<revisions count="1">
+    <revision version="6bd5a15bab249abdadac6ad7f55592cf94200ad1">
+        <vcs-root-instance id="2" vcs-root-id="Psychoffice_PsychofficeGit" name="psychoffice.git" href="/httpAuth/app/rest/vcs-root-instances/id:2"/>
+    </revision>
+</revisions>
+<agent id="1" name="Default Agent" typeId="1" href="/httpAuth/app/rest/agents/id:1"/>
+<testOccurrences count="1" href="/httpAuth/app/rest/testOccurrences?locator=build:(id:25)" passed="1"/>
+<artifacts href="/httpAuth/app/rest/builds/id:25/artifacts/children/"/>
+<relatedIssues href="/httpAuth/app/rest/builds/id:25/relatedIssues"/>
+<statistics href="/httpAuth/app/rest/builds/id:25/statistics"/>
+</build>
