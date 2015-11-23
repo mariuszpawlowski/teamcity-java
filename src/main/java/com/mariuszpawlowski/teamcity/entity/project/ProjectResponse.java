@@ -1,4 +1,4 @@
-package com.mariuszpawlowski.teamcity.entity;
+package com.mariuszpawlowski.teamcity.entity.project;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Created by mario on 22/11/15.
  */
 @XmlRootElement(name="project")
-public class Project
+public class ProjectResponse
 {
     private String id;
 

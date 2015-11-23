@@ -1,4 +1,4 @@
-package com.mariuszpawlowski.teamcity.entity;
+package com.mariuszpawlowski.teamcity.entity.build.request;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Created by mario on 22/11/15.
  */
 @XmlRootElement(name = "build")
-public class Build {
+public class BuildRequest {
 
     private BuildType buildType;
 

@@ -1,9 +1,8 @@
 package com.mariuszpawlowski.teamcity;
 
-import com.mariuszpawlowski.teamcity.entity.Build;
-import com.mariuszpawlowski.teamcity.entity.BuildType;
-import com.mariuszpawlowski.teamcity.entity.Projects;
-import com.owlike.genson.ext.jaxrs.GensonJsonConverter;
+import com.mariuszpawlowski.teamcity.entity.build.request.BuildRequest;
+import com.mariuszpawlowski.teamcity.entity.build.request.BuildType;
+import com.mariuszpawlowski.teamcity.entity.project.ProjectsResponse;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -27,7 +26,7 @@ public class RestClient {
     }
 
     public Client getClient() {
-        ClientConfig clientConfig = new DefaultClientConfig(GensonJsonConverter.class);
+        ClientConfig clientConfig = new DefaultClientConfig();
         Client client = Client.create(clientConfig);
         HTTPBasicAuthFilter authFilter = new HTTPBasicAuthFilter(login, password);
         client.addFilter(authFilter);
@@ -35,21 +34,21 @@ public class RestClient {
         return client;
     }
 
-    public Projects getProjects(String url){
+    public ProjectsResponse getProjects(String url){
         WebResource webResource = getClient().resource(url);
-        Projects response = webResource.accept(MediaType.APPLICATION_XML).get(Projects.class);
+        ProjectsResponse response = webResource.accept(MediaType.APPLICATION_XML).get(ProjectsResponse.class);
         return response;
     }
 
 
     public void runBuild(String url, String buildId) {
-        Build build = new Build();
+        BuildRequest buildRequest = new BuildRequest();
         BuildType buildType = new BuildType();
         buildType.setId(buildId);
-        build.setBuildType(buildType);
+        buildRequest.setBuildType(buildType);
 
         WebResource webResource = getClient().resource(url);
-        ClientResponse response = webResource.accept(MediaType.APPLICATION_XML).post(ClientResponse.class, build);
+        ClientResponse response = webResource.accept(MediaType.APPLICATION_XML).post(ClientResponse.class, buildRequest);
         System.out.println(response.getStatus());
     }
 }

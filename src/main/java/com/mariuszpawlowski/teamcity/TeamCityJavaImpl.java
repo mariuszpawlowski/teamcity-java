@@ -1,6 +1,6 @@
 package com.mariuszpawlowski.teamcity;
 
-import com.mariuszpawlowski.teamcity.entity.Projects;
+import com.mariuszpawlowski.teamcity.entity.project.ProjectsResponse;
 
 /**
  * Created by mario on 21/11/15.
@@ -17,7 +17,7 @@ public class TeamCityJavaImpl implements TeamCityJava{
         this.teamCityHost = teamCityHost;
     }
 
-    public Projects getProjects() {
+    public ProjectsResponse getProjects() {
         String url = teamCityHost + "/httpAuth/app/rest/projects";
         RestClient restClient = new RestClient(login, password);
         return restClient.getProjects(url);

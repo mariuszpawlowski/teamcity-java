@@ -13,14 +13,11 @@
 </build>
 
 
-build response > buildqueue
 
------
-
-        http://pojo.sodhanalibrary.com
 
         http://teamcity.mario.p6.tiktalik.io:8080/httpAuth/app/rest/buildQueue/id:25
 
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <build id="25" buildTypeId="Psychoffice_BuildDeploy" number="14" status="SUCCESS" state="finished" href="/httpAuth/app/rest/builds/id:25" webUrl="http://37.233.102.85:8080/viewLog.html?buildId=25&buildTypeId=Psychoffice_BuildDeploy">
 <statusText>Tests passed: 1</statusText>
 <buildType id="Psychoffice_BuildDeploy" name="[DEV] Build & Deploy" projectName="Psychoffice" projectId="Psychoffice" href="/httpAuth/app/rest/buildTypes/id:Psychoffice_BuildDeploy" webUrl="http://37.233.102.85:8080/viewType.html?buildTypeId=Psychoffice_BuildDeploy"/>

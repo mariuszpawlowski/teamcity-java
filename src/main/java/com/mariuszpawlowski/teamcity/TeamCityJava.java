@@ -1,12 +1,12 @@
 package com.mariuszpawlowski.teamcity;
 
-import com.mariuszpawlowski.teamcity.entity.Projects;
+import com.mariuszpawlowski.teamcity.entity.project.ProjectsResponse;
 
 /**
  * Created by mario on 21/11/15.
  */
 public interface TeamCityJava {
 
-    Projects getProjects();
+    ProjectsResponse getProjects();
     void runBuild(String buildId);
 }
