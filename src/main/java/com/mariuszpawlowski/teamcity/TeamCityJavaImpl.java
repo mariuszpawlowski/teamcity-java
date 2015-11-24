@@ -1,5 +1,7 @@
 package com.mariuszpawlowski.teamcity;
 
+import com.mariuszpawlowski.teamcity.entity.build.response.BuildResponse;
+import com.mariuszpawlowski.teamcity.entity.build.response.RunBuildResponse;
 import com.mariuszpawlowski.teamcity.entity.project.ProjectsResponse;
 
 /**
@@ -23,9 +25,15 @@ public class TeamCityJavaImpl implements TeamCityJava{
         return restClient.getProjects(url);
     }
 
-    public void runBuild(String buildId) {
+    public RunBuildResponse runBuild(String buildId) {
         String url = teamCityHost + "/httpAuth/app/rest/buildQueue";
         RestClient restClient = new RestClient(login, password);
-        restClient.runBuild(url, buildId);
+        return restClient.runBuild(url, buildId);
+    }
+
+    public BuildResponse getBuild(String currentBuildId) {
+        String url = teamCityHost + "/httpAuth/app/rest/buildQueue/id:" + currentBuildId;
+        RestClient restClient = new RestClient(login, password);
+        return restClient.getBuild(url);
     }
 }

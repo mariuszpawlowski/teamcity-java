@@ -2,9 +2,10 @@ package com.mariuszpawlowski.teamcity;
 
 import com.mariuszpawlowski.teamcity.entity.build.request.BuildRequest;
 import com.mariuszpawlowski.teamcity.entity.build.request.BuildType;
+import com.mariuszpawlowski.teamcity.entity.build.response.BuildResponse;
+import com.mariuszpawlowski.teamcity.entity.build.response.RunBuildResponse;
 import com.mariuszpawlowski.teamcity.entity.project.ProjectsResponse;
 import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
@@ -41,14 +42,19 @@ public class RestClient {
     }
 
 
-    public void runBuild(String url, String buildId) {
+    public RunBuildResponse runBuild(String url, String buildId) {
         BuildRequest buildRequest = new BuildRequest();
         BuildType buildType = new BuildType();
         buildType.setId(buildId);
         buildRequest.setBuildType(buildType);
-
         WebResource webResource = getClient().resource(url);
-        ClientResponse response = webResource.accept(MediaType.APPLICATION_XML).post(ClientResponse.class, buildRequest);
-        System.out.println(response.getStatus());
+        RunBuildResponse response = webResource.accept(MediaType.APPLICATION_XML).post(RunBuildResponse.class, buildRequest);
+        return response;
+    }
+
+    public BuildResponse getBuild(String url) {
+        WebResource webResource = getClient().resource(url);
+        BuildResponse response = webResource.accept(MediaType.APPLICATION_XML).get(BuildResponse.class);
+        return response;
     }
 }

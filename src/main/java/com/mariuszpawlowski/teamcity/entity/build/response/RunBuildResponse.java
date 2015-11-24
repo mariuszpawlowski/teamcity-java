@@ -1,8 +1,13 @@
 package com.mariuszpawlowski.teamcity.entity.build.response;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Created by mario on 22/11/15.
  */
+@XmlRootElement(name = "build")
 public class RunBuildResponse {
     private String id;
 
@@ -30,139 +35,125 @@ public class RunBuildResponse {
 
     private Changes changes;
 
-    public String getId ()
-    {
+    @XmlAttribute
+    public String getId() {
         return id;
     }
 
-    public void setId (String id)
-    {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public BuildType getBuildType ()
-    {
+    @XmlElement
+    public BuildType getBuildType() {
         return buildType;
     }
 
-    public void setBuildType (BuildType buildType)
-    {
+    public void setBuildType(BuildType buildType) {
         this.buildType = buildType;
     }
 
-    public String getQueuedDate ()
-    {
+    @XmlElement
+    public String getQueuedDate() {
         return queuedDate;
     }
 
-    public void setQueuedDate (String queuedDate)
-    {
+    public void setQueuedDate(String queuedDate) {
         this.queuedDate = queuedDate;
     }
 
-    public CompatibleAgents getCompatibleAgents ()
-    {
+    @XmlElement
+    public CompatibleAgents getCompatibleAgents() {
         return compatibleAgents;
     }
 
-    public void setCompatibleAgents (CompatibleAgents compatibleAgents)
-    {
+    public void setCompatibleAgents(CompatibleAgents compatibleAgents) {
         this.compatibleAgents = compatibleAgents;
     }
 
-    public String getWebUrl ()
-    {
+    @XmlAttribute
+    public String getWebUrl() {
         return webUrl;
     }
 
-    public void setWebUrl (String webUrl)
-    {
+    public void setWebUrl(String webUrl) {
         this.webUrl = webUrl;
     }
 
-    public String getBuildTypeId ()
-    {
+    @XmlAttribute
+    public String getBuildTypeId() {
         return buildTypeId;
     }
 
-    public void setBuildTypeId (String buildTypeId)
-    {
+    public void setBuildTypeId(String buildTypeId) {
         this.buildTypeId = buildTypeId;
     }
 
-    public String getState ()
-    {
+    @XmlAttribute
+    public String getState() {
         return state;
     }
 
-    public void setState (String state)
-    {
+    public void setState(String state) {
         this.state = state;
     }
 
-    public String getStartEstimate ()
-    {
+    @XmlElement
+    public String getStartEstimate() {
         return startEstimate;
     }
 
-    public void setStartEstimate (String startEstimate)
-    {
+    public void setStartEstimate(String startEstimate) {
         this.startEstimate = startEstimate;
     }
 
-    public Revisions getRevisions ()
-    {
+    @XmlElement
+    public Revisions getRevisions() {
         return revisions;
     }
 
-    public void setRevisions (Revisions revisions)
-    {
+    public void setRevisions(Revisions revisions) {
         this.revisions = revisions;
     }
 
-    public String getHref ()
-    {
+    @XmlAttribute
+    public String getHref() {
         return href;
     }
 
-    public void setHref (String href)
-    {
+    public void setHref(String href) {
         this.href = href;
     }
 
-    public Triggered getTriggered ()
-    {
+    @XmlElement
+    public Triggered getTriggered() {
         return triggered;
     }
 
-    public void setTriggered (Triggered triggered)
-    {
+    public void setTriggered(Triggered triggered) {
         this.triggered = triggered;
     }
 
-    public Artifacts getArtifacts ()
-    {
+    @XmlElement
+    public Artifacts getArtifacts() {
         return artifacts;
     }
 
-    public void setArtifacts (Artifacts artifacts)
-    {
+    public void setArtifacts(Artifacts artifacts) {
         this.artifacts = artifacts;
     }
 
-    public Changes getChanges ()
-    {
+    @XmlElement
+    public Changes getChanges() {
         return changes;
     }
 
-    public void setChanges (Changes changes)
-    {
+    public void setChanges(Changes changes) {
         this.changes = changes;
     }
 
     @Override
-    public String toString()
-    {
-        return "ClassPojo [id = "+id+", buildType = "+buildType+", queuedDate = "+queuedDate+", compatibleAgents = "+compatibleAgents+", webUrl = "+webUrl+", buildTypeId = "+buildTypeId+", state = "+state+", startEstimate = "+startEstimate+", revisions = "+revisions+", href = "+href+", triggered = "+triggered+", artifacts = "+artifacts+", changes = "+changes+"]";
+    public String toString() {
+        return "ClassPojo [id = " + id + ", buildType = " + buildType + ", queuedDate = " + queuedDate + ", compatibleAgents = " + compatibleAgents + ", webUrl = " + webUrl + ", buildTypeId = " + buildTypeId + ", state = " + state + ", startEstimate = " + startEstimate + ", revisions = " + revisions + ", href = " + href + ", triggered = " + triggered + ", artifacts = " + artifacts + ", changes = " + changes + "]";
     }
 }

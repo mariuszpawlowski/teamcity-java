@@ -1,8 +1,13 @@
 package com.mariuszpawlowski.teamcity.entity.build.response;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Created by Mariusz.Pawlowski on 2015-11-23.
  */
+@XmlRootElement(name = "buildType")
 public class BuildType
 {
     private String id;
@@ -17,6 +22,7 @@ public class BuildType
 
     private String href;
 
+    @XmlAttribute
     public String getId ()
     {
         return id;
@@ -27,6 +33,7 @@ public class BuildType
         this.id = id;
     }
 
+    @XmlAttribute
     public String getWebUrl ()
     {
         return webUrl;
@@ -37,6 +44,7 @@ public class BuildType
         this.webUrl = webUrl;
     }
 
+    @XmlAttribute
     public String getName ()
     {
         return name;
@@ -47,6 +55,7 @@ public class BuildType
         this.name = name;
     }
 
+    @XmlAttribute
     public String getProjectId ()
     {
         return projectId;
@@ -57,6 +66,7 @@ public class BuildType
         this.projectId = projectId;
     }
 
+    @XmlAttribute
     public String getProjectName ()
     {
         return projectName;
@@ -67,6 +77,7 @@ public class BuildType
         this.projectName = projectName;
     }
 
+    @XmlAttribute
     public String getHref ()
     {
         return href;
