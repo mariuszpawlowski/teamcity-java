@@ -1,10 +1,10 @@
-package com.mariuszpawlowski.teamcity;
+package pl.mariuszpawlowski.teamcity;
 
-import com.mariuszpawlowski.teamcity.entity.build.request.BuildRequest;
-import com.mariuszpawlowski.teamcity.entity.build.request.BuildType;
-import com.mariuszpawlowski.teamcity.entity.build.response.BuildResponse;
-import com.mariuszpawlowski.teamcity.entity.build.response.RunBuildResponse;
-import com.mariuszpawlowski.teamcity.entity.project.ProjectsResponse;
+import pl.mariuszpawlowski.teamcity.entity.build.request.BuildRequest;
+import pl.mariuszpawlowski.teamcity.entity.build.request.BuildType;
+import pl.mariuszpawlowski.teamcity.entity.build.response.BuildResponse;
+import pl.mariuszpawlowski.teamcity.entity.build.response.RunBuildResponse;
+import pl.mariuszpawlowski.teamcity.entity.project.ProjectsResponse;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;

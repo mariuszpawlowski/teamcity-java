@@ -1,19 +1,17 @@
-package com.mariuszpawlowski.teamcity.entity.project;
+package pl.mariuszpawlowski.teamcity.entity.build.response;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Created by mario on 22/11/15.
+ * Created by Mariusz.Pawlowski on 2015-11-23.
  */
-@XmlRootElement(name="project")
-public class ProjectResponse
+@XmlRootElement(name = "user")
+public class User
 {
     private String id;
 
-    private String webUrl;
-
-    private String description;
+    private String username;
 
     private String name;
 
@@ -31,25 +29,14 @@ public class ProjectResponse
     }
 
     @XmlAttribute
-    public String getWebUrl ()
+    public String getUsername ()
     {
-        return webUrl;
+        return username;
     }
 
-    public void setWebUrl (String webUrl)
+    public void setUsername (String username)
     {
-        this.webUrl = webUrl;
-    }
-
-    @XmlAttribute
-    public String getDescription ()
-    {
-        return description;
-    }
-
-    public void setDescription (String description)
-    {
-        this.description = description;
+        this.username = username;
     }
 
     @XmlAttribute
@@ -77,6 +64,6 @@ public class ProjectResponse
     @Override
     public String toString()
     {
-        return "ClassPojo [id = "+id+", webUrl = "+webUrl+", description = "+description+", name = "+name+", href = "+href+"]";
+        return "ClassPojo [id = "+id+", username = "+username+", name = "+name+", href = "+href+"]";
     }
 }

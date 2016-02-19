@@ -1,8 +1,8 @@
-package com.mariuszpawlowski.teamcity;
+package pl.mariuszpawlowski.teamcity;
 
-import com.mariuszpawlowski.teamcity.entity.build.response.BuildResponse;
-import com.mariuszpawlowski.teamcity.entity.build.response.RunBuildResponse;
-import com.mariuszpawlowski.teamcity.entity.project.ProjectsResponse;
+import pl.mariuszpawlowski.teamcity.entity.build.response.BuildResponse;
+import pl.mariuszpawlowski.teamcity.entity.build.response.RunBuildResponse;
+import pl.mariuszpawlowski.teamcity.entity.project.ProjectsResponse;
 
 /**
  * Created by mario on 21/11/15.

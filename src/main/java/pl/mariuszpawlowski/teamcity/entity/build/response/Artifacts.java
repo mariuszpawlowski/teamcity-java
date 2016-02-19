@@ -1,17 +1,17 @@
-package com.mariuszpawlowski.teamcity.entity.build.response;
+package pl.mariuszpawlowski.teamcity.entity.build.response;
 
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Created by Mariusz.Pawlowski on 2015-11-23.
  */
-@XmlRootElement(name = "changes")
-public class Changes
+@XmlRootElement(name = "artifacts")
+public class Artifacts
 {
     private String href;
 
-    @XmlElement
+    @XmlAttribute
     public String getHref ()
     {
         return href;

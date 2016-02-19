@@ -1,4 +1,4 @@
-package com.mariuszpawlowski.teamcity.entity.build.request;
+package pl.mariuszpawlowski.teamcity.entity.build.request;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
